@@ -19,7 +19,7 @@
                 <p class="text-danger small pt-0 mt-0">*Todos los campos son obligatorios</p>
                 <div class="alert alert-success d-none" id="mensajeExito">Mensaje enviado con éxito</div>
                 <div class="alert alert-danger d-none" id="mensajeError"></div>
-                <form id="formulario">
+                <form id="formulario" >
                     <div class="row form-group">
                         <label for="nombre" class="col-form-label col-md-4">NOMBRE:</label>
                         <div class="col-md-8">
@@ -58,12 +58,18 @@
                     </div>
             </div>
                     
-                    <button type="submit" name="accion" value="" class ="btn btn-primary">Enviar Registro</button>
+                    <button type="submit"  class ="btn btn-primary">Enviar Registro</button>
+               
                 </form>
-            
+                <form action="Secciones/vista.php" method="post">
+                    <button type="submit" name="accion" value ="" class="btn btn-danger">Vista de alumnos registrados</button>
+                    </form>
+                    
             </div>
+            
         </div>
     </div>
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
