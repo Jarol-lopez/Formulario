@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(E_All);
+ini_set('display_errors',1);
 $error = '';
 
 //VALIDANDO NOMBRE
@@ -99,6 +100,10 @@ if($error == ''){
     echo $error;
 }
 
+require_once('conexion.php');
+$sql = 'INSERT INTO registros_usuarios (id,nombre,apellido,DNI,fecha_nacimiento,correo) VALUES (NULL,:nombre,:apellido,:DNI,:fecha_nacimiento,:correo)';
+$preparado = $conexion -> prepare($sql);
+$preparado-> execute(array(':nombre'=>$nombre,':apellido'=>$apellido,':DNI'=>$DNI,':fecha_nacimiento'=>$nacimiento,':correo'=>$email));
 
 
 ?>
